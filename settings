@@ -1,0 +1,2 @@
+ Set-VpnConnection -Name "VPN RTK-SERVICE 2FA" -EncryptionLevel "Optional" -AuthenticationMethod PAP -SplitTunneling:$true –PassThru
+((Get-Content -path "$env:USERPROFILE\AppData\Roaming\Microsoft\Network\Connections\Pbk\rasphone.pbk" -Raw) -replace 'DisableClassBasedDefaultRoute=0','DisableClassBasedDefaultRoute=1') | Set-Content -Path "$env:USERPROFILE\AppData\Roaming\Microsoft\Network\Connections\Pbk\rasphone.pbk"
